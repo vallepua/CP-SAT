@@ -1,10 +1,10 @@
-streamlit==1.36.0
-ortools==9.8.3296
-protobuf>=4.24,<5
-numpy>=1.23,<2
-pandas>=2.1,<2.3
-matplotlib>=3.7,<3.9
-python-3.11
+streamlit
+ortools
+protobuf
+numpy
+pandas
+matplotlib
+
 
 
 
