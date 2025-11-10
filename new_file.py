@@ -203,12 +203,12 @@ with right:
                 seed=int(seed),
             )
         # st.success(f"CP-SAT Solver: Best known lower bound: **k* = {k_star}** (N={N}, C={C})")
-        st.success(f"CP-SAT Solver: Best known lower bound Kn({C}, {N}) = {k_star}")
+        st.success(f"CP-SAT Solver: Best known lower bound Kn({c}, {n}) = {k_star}")
 
         st.caption(f"Total solver time (binary search over k): {total_t:.2f} s")
 
         if board is not None:
-            fig = render_board(board, title=f"N={N}, C={C}, k*={k_star}")
+            fig = render_board(board, title=f"N={n}, C={c}, k*={k_star}")
             st.pyplot(fig, clear_figure=True)
 
             # download PNG
