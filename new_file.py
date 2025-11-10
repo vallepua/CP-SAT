@@ -115,17 +115,33 @@ def max_equal_k_by_cpsat(N: int, C: int,
 
 
 # -------------------- Rendering --------------------
-
 def render_board(board: List[List[int]], title: str = "") -> plt.Figure:
     """Return a Matplotlib Figure rendering the board (no plt.show())."""
     N = len(board)
     fig, ax = plt.subplots(figsize=(6, 6))
-    # background checkerboard
+
+    # background checkerboard with custom colors
+    light_sq = "#f0d9b5"
+    dark_sq  = "#b58863"
+
     bg = [[(i + j) % 2 for j in range(N)] for i in range(N)]
-    ax.imshow(bg, cmap="binary", vmin=0, vmax=1)
+    cmap = mcolors.ListedColormap([light_sq, dark_sq])
+    ax.imshow(bg, cmap=cmap, vmin=0, vmax=1)
+
     for k in range(N + 1):
         ax.axhline(k - 0.5, color='k', linewidth=0.6)
         ax.axvline(k - 0.5, color='k', linewidth=0.6)
+
+# def render_board(board: List[List[int]], title: str = "") -> plt.Figure:
+#     """Return a Matplotlib Figure rendering the board (no plt.show())."""
+#     N = len(board)
+#     fig, ax = plt.subplots(figsize=(6, 6))
+#     # background checkerboard
+#     bg = [[(i + j) % 2 for j in range(N)] for i in range(N)]
+#     ax.imshow(bg, cmap="binary", vmin=0, vmax=1)
+#     for k in range(N + 1):
+#         ax.axhline(k - 0.5, color='k', linewidth=0.6)
+#         ax.axvline(k - 0.5, color='k', linewidth=0.6)
 
     # palette
     armies_present = sorted(set(v for row in board for v in row if v >= 0))
