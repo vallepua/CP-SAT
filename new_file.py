@@ -159,13 +159,13 @@ left, right = st.columns([1, 2], gap="large")
 
 with left:
     st.subheader("Inputs")
-    N = st.number_input("Board size N", min_value=1, max_value=40, value=8, step=1)
-    C = st.number_input("Number of colors (armies) C", min_value=1, max_value=20, value=3, step=1)
+    N = st.number_input("Board size (nxn)", min_value=1, max_value=40, value=8, step=1)
+    C = st.number_input("Number of Armies (c)", min_value=1, max_value=20, value=3, step=1)
 
-    st.caption("Solver settings")
-    time_limit = st.slider("Time limit per feasibility check (seconds)", 1, 60, 10, step=1)
-    workers = st.slider("Parallel workers", 1, 8, 4, step=1)
-    seed = st.number_input("Random seed", min_value=0, max_value=10_000, value=1, step=1)
+    # st.caption("Solver settings")
+    # time_limit = st.slider("Time limit per feasibility check (seconds)", 1, 60, 10, step=1)
+    # workers = st.slider("Parallel workers", 1, 8, 4, step=1)
+    # seed = st.number_input("Random seed", min_value=0, max_value=10_000, value=1, step=1)
 
     run = st.button("Compute maximum equal k using CP-SAT", type="primary", use_container_width=True)
 
