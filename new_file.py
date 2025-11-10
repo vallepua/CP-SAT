@@ -208,7 +208,7 @@ with right:
         st.caption(f"Total solver time (binary search over k): {total_t:.2f} s")
 
         if board is not None:
-            fig = render_board(board, title=f"N={n}, C={c}, k*={k_star}")
+            fig = render_board(board, title=f"N={N}, C={C}, k*={k_star}")
             st.pyplot(fig, clear_figure=True)
 
             # download PNG
