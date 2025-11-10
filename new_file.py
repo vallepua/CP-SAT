@@ -186,7 +186,7 @@ with right:
                 workers=int(workers),
                 seed=int(seed),
             )
-        st.success(f"Maximum equal per-army knights: **k* = {k_star}** (N={N}, C={C})")
+        st.success(f"CP-SAT Solver: Best known lower bound: **k* = {k_star}** (N={N}, C={C})")
         st.caption(f"Total solver time (binary search over k): {total_t:.2f} s")
 
         if board is not None:
